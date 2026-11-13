@@ -67,3 +67,8 @@ def repl():
 
 if __name__ == "__main__":
     repl()
+# Expose Chat at the bottom AFTER repl is defined
+Chat = repl
+
+if __name__ == "__main__":
+    repl()
