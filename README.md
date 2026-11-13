@@ -4,6 +4,11 @@ DocChat is a command-line assistant that answers questions about local documents
 
 ## Example Sessions
 
+## Usage
+```bash
+pip install -e .
+chat
+
 # Markdown Compiler
 ```bash
 cd test_projects/markdown-compiler

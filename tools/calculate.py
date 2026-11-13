@@ -19,3 +19,8 @@ def calculate(expression: str) -> str:
         return str(result)
     except Exception as e:
         return f"Error: {e}"
+        """
+>>> calculate("1 / 0")
+'Error: invalid characters in expression'
+"""
+        
