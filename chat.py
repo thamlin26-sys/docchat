@@ -13,7 +13,10 @@ except ImportError:
 _model_client = None
 
 def get_model_client():
-    """Lazily initialize and return the model client only when sending a chat message."""
+    """Lazily initialize and return the model client only when sending a chat message.
+
+    >>> client = get_model_client()
+    """
     global _model_client
     if _model_client is None:
         # Initialize your LLM client here using os.environ.get("GEMINI_API_KEY") etc.
@@ -58,7 +61,7 @@ def repl():
     while True:
         try:
             user_input = input("docchat> ")
-        except (KeyboardInterrupt, EOFError):
+        except (KeyboardInterrupt, EOFError, OSError):
             print("\nGoodbye!")
             break
         
